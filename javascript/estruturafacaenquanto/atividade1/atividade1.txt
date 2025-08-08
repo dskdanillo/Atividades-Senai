@@ -1,0 +1,1 @@
+Faça um algoritmo que leia quantos números o usuário deseja informar e imprimir seu somatório. Para finalizara estrutura digite 0 (número) zero

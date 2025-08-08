@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/*CONFIGURAÇÃO GERAL DO CORPO DA PAGINA*/
+body{
+    background-color: blueviolet;
+}
+h1{
+    color:blue;
+    padding: 10px;
+    
+    }
+p{
+    color:chartreuse
+
+    }

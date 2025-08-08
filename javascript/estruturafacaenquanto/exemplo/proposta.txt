@@ -1,0 +1,1 @@
+Exemplo de funcionamento estrutura faça enquanto no Javascript
