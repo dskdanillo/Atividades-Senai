@@ -1,67 +1,71 @@
-function validaProc(){
+function validaProc() {
+    let idadeM = 0;
+    let idadeF = 0;
+    let salarioMasculino = 0;
+    let salarioFeminino = 0;
+    let somasalarioM = 0;
+    let somaSalarioF = 0;
+    let somaGrupoSalario = 0;
+    let contador = 0;
+    let contadorM = 0;
+    let contadorF = 0;
+    let somaIdadeM = 0;
+    let somaIdadeF = 0;
+    
+    let finalizar = "";
+   
+    let sexo
+    let mediaSalarioGrupo
+    let somaIdade
+    let mediaIdade
+
+    alert("Olá");
+
+    do {
+        contador++;
+        sexo = parseInt(prompt("Qual seu gênero? (1- Masculino <> 2- Feminino)"));
+
+        switch (sexo) {
+            case 1:
+                idadeM = parseInt(prompt("Insira sua Idade: "));
+                console.log("Idade digitada: "+idadeM)
+                salarioMasculino = parseFloat(prompt("Insira seu Salário: "));
+                console.log("Salário digitado: "+salarioMasculino)
+                                
+                                somaIdadeM += idadeM;
+                                somasalarioM += salarioMasculino;
+                                contadorM++;
+                break;
+
+            case 2:
+                idadeF = parseInt(prompt("Insira sua Idade: "));
+                console.log("Idade digitada: "+idadeF)
+                salarioFeminino = parseFloat(prompt("Insira seu Salário: "));
+                console.log("Salário digitado: "+salarioFeminino)
+                               
+                                somaIdadeF += idadeF;
+                                somaSalarioF += salarioFeminino;
+                                contadorF++;
+                break;
+
+            
+        }
+
+        finalizar = prompt("Pressione ENTER para continuar ou digite 'finalizar' para encerrar");
+
+    } while (finalizar !== "finalizar");
+
+                        somaGrupoSalario = somasalarioM + somaSalarioF;
+                        mediaSalarioGrupo = somaGrupoSalario / contador;
+                        somaIdade = somaIdadeM + somaIdadeF;
+                        mediaIdade = somaIdade / contador;
+
+                                console.log("Soma total dos salário: "+somaGrupoSalario);
+                                console.log("Total de pessoas avaliadas:", contador);
+                                console.log("Média de salário do grupo:", mediaSalarioGrupo);
+                                console.log("Média de idade do grupo:", mediaIdade);
 
 
-let media
-let idadeM
-let idadeF
-let mediaIdade
-let salarioMasculino
-let salarioFeminino
-let salario 
-let sexo
-let somasalarioM
-let somaSalarioF
-let somaGrupoSalario
-let contador=0
-let contadorM
-let contadorF
-
-alert("Olá")
-
-    do{
-        contador++
-        sexo = parseInt(prompt("Qual seu genero?: (1- Masculino | 2- Feminino"));
-        switch(sexo){
-
-            case 1: 
-                 idadeM = parseInt(pront("Insira sua Idade: "));
-                 salarioMasculino= parseFloat(pront("Insira seu Sálario: "));
-                 somasalarioM += salarioMasculino
-                 contadorM++
-                 return false
-                
-            case 2: 
-                 idadeF = parseInt(pront("Insira sua Idade: "));
-                 salarioFeminino = parseFloat(pront("Insira seu Sálario: "));
-                 somaSalarioF += salarioFeminino
-                 contadorF++
-                 return false
-              
-
-                
-                let finalizar = prompt("Deseja continuar click ENTER ou digite finalizar para encerrar ");
-                if (finaliza !== "finalizar") {
-                    continuar = false;
-                }
-        
-            } while (continuar);
-                return false
-          
-            somaGrupoSalario = somaSalarioM + somaSalarioF
-            mediaSalarioGrupo = somaGrupoSalario/contador
-
-            somaIdade = idadeF + idadeM
-            mediaIdade = somaIdade/contador
+ }
 
 
-
-          
-          
-          
-            }
-
-
-
-
-
-}
