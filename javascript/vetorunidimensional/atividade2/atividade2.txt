@@ -1,0 +1,3 @@
+Faça um programa pra ler as nots obtidas  pelo aluno
+e depois exibir um relatório da notas iguais ou superior a 7.5 e tambem 
+no final a quantidade de notas ou superior 7.5
