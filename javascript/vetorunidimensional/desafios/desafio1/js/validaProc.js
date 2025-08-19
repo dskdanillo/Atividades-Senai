@@ -1,23 +1,24 @@
 function validaProc() {
-    let alunos= 5;
-    let notasPorAluno= 2;
-    let media=[];
-    let i
-    let soma= 0
-    let j;
-    let nota
+    let notaPrimeiraAlunos = [];
+    let notaSegundaAlunos = [];
+    let media = [];
+            
 
-    for (i = 0; i < alunos; i++) {
-    soma = 0
 
-        for (j = 0; j < notasPorAluno; j++) {
-            nota = parseFloat(prompt("Digite a " + (j + 1) + "ª nota do " + (i + 1) + "º aluno:"));
-            soma += nota;
-        }
+    for (let i = 0; i < 5; i++) {
+ 
+        notaPrimeiraAlunos[i] = parseFloat(prompt("Digite a 1ª nota do " + (i + 1) + "º aluno:"));
 
-                     media[i] = soma / notasPorAluno;
-                     console.log("A média do " + (i + 1) + "º aluno é: " + media[i]);
+    
+        notaSegundaAlunos[i] = parseFloat(prompt("Digite a 2ª nota do " + (i + 1) + "º aluno:"));
+
+
+        let soma = notaPrimeiraAlunos[i] + notaSegundaAlunos[i];
+        media[i] = soma / 2;
+
+        console.log("A média do " + (i + 1) + "º aluno é: " + media[i]);
     }
 
+    alert("Cálculo das médias concluído!");
     return false;
 }

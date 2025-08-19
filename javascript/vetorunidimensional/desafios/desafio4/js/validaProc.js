@@ -2,7 +2,7 @@ function validaProc() {
 
     let num = [];
 
-    let inverso = [];
+   
 
     for (let i = 0; i < 4; i++) {
 
@@ -15,8 +15,8 @@ function validaProc() {
 
 
     for (let i = 3; i >= 0; i--) {
-        console.log("Número em ordem inversa [" + i + "]: " + num[i]);
-        alert("Número em ordem inversa [" + i + "]: " + num[i]);
+        console.log("Número em ordem inversa " +i+ ": " + num[i]);
+
     }
 
     return false;
