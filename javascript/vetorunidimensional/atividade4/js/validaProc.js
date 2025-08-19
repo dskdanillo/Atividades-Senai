@@ -1,26 +1,25 @@
-function validaProc(){
+function validaProc() {
 
-      
+
     let i;
 
-    let num=[];
- 
-    for(i = 0; i<10 ; i++){
+    let num = [];
 
-        num[i]=parseFloat(prompt("Digite o "+i+"° numero"));
+    for (i = 0; i < 10; i++) {
+
+        num[i] = parseFloat(prompt("Digite o " + (i+1) + "° numero"));
 
     }
 
-    
-    for (i=0 ; i<10; i++){
 
-            
+    for (i = 0; i < 10; i++) {
 
-                if(num[i] % 2!= 0){
-                   
-                    console.log("As valor da posição impar é: "+num[i]);
-                }
-            }
-            return false
+
+
+        if (i% 2 != 0) {
+            console.log("A posição " +i+ " é : "+ num[i]);
         }
+    }
+    return false
+}
 
