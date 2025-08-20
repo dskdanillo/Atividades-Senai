@@ -19,6 +19,6 @@ function validaProc() {
         console.log("A média do " + (i + 1) + "º aluno é: " + media[i]);
     }
 
-    alert("Cálculo das médias concluído!");
+    alert("Cálculo das médias concluído! So curtir as férias");
     return false;
 }
