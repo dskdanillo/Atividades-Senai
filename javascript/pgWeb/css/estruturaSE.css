@@ -1,0 +1,42 @@
+.keyword {
+    font-weight: bold;  /* Negrito */
+    color: blue;        /* Cor azul (pode mudar para outra) */
+}
+.divExercicio {
+    margin-top: 20px;
+    padding: 15px;
+    background: #222;
+    color: white;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.divExercicio input {
+    width: 80%;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.divExercicio button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background: yellow;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.divExercicio button:hover {
+    background: orange;
+}
+
+#resultado {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+Com isso:

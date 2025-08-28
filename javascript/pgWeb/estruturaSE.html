@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura SE</title>
+    <link rel="stylesheet" href="../pgWeb/css/estruturaSE.css">
+    <script src="js/animacao.js"></script>
+</head>
+
+<body>
+    <h1>Estrutura Condicionais If / Else If / Else</h1>
+    <br><br>
+
+    <h3><strong> Condicionais If / Else If / Else</strong></h3>
+
+    <div class="div1">
+
+        <h4>Função - Avaliar expressões booleanas e executar blocos de códigos <br>somente quando a condição é
+            verdadeira.
+        </h4>
+    </div>
+
+    <div class="divsintax"><strong>SINTAXE BÁSICA</strong></div>
+    <div class="div2">
+
+        <span class="keyword">if</span> (nota >= 90) { <br>
+        &nbsp;&nbsp;console.log("Aprovado com excelência!"); <br>
+        } <span class="keyword">else if</span> (nota >= 60) { <br>
+        &nbsp;&nbsp;console.log("Aprovado!"); <br>
+        } <span class="keyword">else</span> { <br>
+        &nbsp;&nbsp;console.log("Reprovado!"); <br>
+        }
+
+    </div>
+<div>Proposta</div>
+
+    <form><!--ATENÇÃO-->
+        <div class="textareaSE">
+            <textarea name="fonte" cols="70" rows="20">
+                    <!DOCTYPE html>
+                    <html lang="pt-br">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>ESTRUTURA SE JAVASCRIPT</title>
+                        
+                    
+                    </head>
+                    <body>
+                        <section><h2>ATIVIDADE - Calculo média de aluno - Estrutura condicional  "se"(if)</h2>
+                            <font face="Arial">
+                                <form name="frmnotas" action"#" method="get" onsubmit="return procFormulario()">
+                    
+                                    <fieldset class="cadmedialuno1">
+                    
+                                            <legend>Entrada de dados</legend>
+                                            <br>
+                                            <label for="num1">Nota 1:</label>
+                                            <input type="text" name="txtnum1" id="num1">
+                                            <br><br>
+                                            <label for="num2">Nota 2:</label>
+                                            <input type="text" name="txtnum2" id="num2">
+                                            <br><br>
+                                            <label for="num3">Nota 3:</label>
+                                            <input type="text" name="txtnum3" id="num3">
+                                            <br>
+                                            <button type="reset">Limpar</button><button type="submit">Enviar</button>
+                    
+                                    </fieldset>  
+                    
+                                </form> 
+                            </font>
+                        </section>
+                    </body>
+                    </html>
+                   
+                   
+                   <style>
+                        
+    
+    section {
+        
+        margin-top: 0px auto;
+        
+    }
+    
+    .cadmedialuno1 {
+        width: 300px;
+        margin: 0px auto;
+        font-weight: bold;
+        margin-bottom: 10px;
+    
+    }
+    
+    .cadmedialuno1 input{
+        margin: 5px auto;
+        width: 100%;
+        padding: 5px 0;
+    }
+    
+    .cadmedialuno1 button{
+    
+        width: 30%;
+        margin: 0 10%;
+        background-color: rgb(0, 89, 167);
+        font-weight: bold;
+        font-size: 16px; 
+        color: white;
+    }
+    
+    label {
+    
+        float: left
+    }
+    
+    h2 {
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 50px;
+    }
+                    </style>
+                    <script>
+                        function procFormulario() {
+                            //validação de campos
+                            if (document.frmnotas.txtnum1.value == "") {
+
+                                alert("Informe o primeiro número");
+                                document.frmnotas.txtnum1.focus();
+                                return false;
+                            } else if (document.frmnotas.txtnum2.value == "") {
+
+                                alert("Informe o segundo número");
+                                document.frmnotas.txtnum2.focus();
+                                return false;
+                            } else if (document.frmnotas.txtnum3.value == "") {
+
+                                alert("Informe o terceiro número");
+                                document.frmnotas.txtnum3.focus();
+                                return false;
+                            } else {
+                                //Processamento do programa
+                                let nota1 = parseFloat(document.getElementById('num1').value)
+                                let nota2 = parseFloat(document.getElementById('num2').value)
+                                let nota3 = parseFloat(document.getElementById('num3').value)
+                                let media = (nota1 + nota2 + nota3) / 3;
+
+                                if (media >= 7) {
+
+                                    alert("Sua média foi " + media.toFixed(2) + ", Você foi aprovado!");
+
+                                } else if (media >= 5 & media <= 6.9) {
+
+                                    alert("Sua média foi " + media.tofixed(2) + ", Você está de recuperação!");
+
+                                } else {
+
+                                    alert("Sua média foi " + media.toFixed(2) + ", Você foi reprovado!");
+                                }
+                            }
+                    </script>
+                
+                }</textarea>
+
+        </div>
+        <div>
+            <input type="button" value="Executar" onclick="document.write(fonte.value);" />
+        </div>
+    </form>
+</body>
+
+</html>
