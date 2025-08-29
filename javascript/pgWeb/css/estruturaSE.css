@@ -39,4 +39,28 @@
     font-size: 18px;
     font-weight: bold;
 }
-Com isso:
+.keyword-switch {
+    color: blue;
+    font-weight: bold;
+}
+
+.keyword-case {
+    color: green;
+    font-weight: bold;
+}
+
+.keyword-break {
+    color: red;
+    font-weight: bold;
+}
+
+.codigo {
+    background-color: #f4f4f4;
+    padding: 10px;
+    font-family: monospace;
+    border-radius: 5px;
+    white-space: pre; /* mantém quebras de linha e espaços */
+    
+    width: 50%;          /* ocupa metade da tela */
+    margin-left: 0;      /* alinha à esquerda */
+}
