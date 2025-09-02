@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth; /* Rolagem suave */
+    background-image: url("../pg2.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+}
+.container{
+
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+}
+.logo{
+    display: flex;
+    align-items: top;
+
+}
+/* Menu fixo no topo */
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #222;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+img{
+    width: 250px;
+    height: 250px;
+
+}
+h1{
+    font-size: 80px;
+   width: 500px;
+    color: rgb(224, 214, 70);
+    margin-left: 50px;
+    text-align: end;
+}
+.botoes{
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+h2{
+
+    margin-left: 50px;
+    margin-top: 10px;
+    color: rgb(224, 214, 70);
+}
+nav{
+    margin-left: 50px;
+    color: yellow;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.menu a {
+    color: yellow;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+/* Seções */
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+#sec1 { background: #1e1e1e; }
+#sec2 { background: #333; }
+#sec3 { background: #555; }

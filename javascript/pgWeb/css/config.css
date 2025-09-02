@@ -1,88 +1,124 @@
+/* Fonte futurista gamer */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+/* Fundo com imagem estática + gif animado no canto */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth; /* Rolagem suave */
-    background-image: url("../img/pg3.png");
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-
+    padding: 0;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 18px;
+    background: url('../img/gif.gif') no-repeat center center fixed, url('../img/animacao.gif') no-repeat top right;
+    background-size: cover, 150px;
+    color: #ffffff;
 }
-.container{
-
-    width: 100vw;
-    display: flex;
-    justify-content: flex-end;
+.gif-overlay {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 250px;
+    height: 250px;
+    background: url('../img/animacaojs.gif') no-repeat center center;
+    background-size: contain;
+    pointer-events: none;
 }
+
+
+/* Container principal */
+.container {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Logo */
+
 .logo{
     display: flex;
     align-items: top;
 
 }
-/* Menu fixo no topo */
-.menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #222;
-    padding: 15px;
-    text-align: center;
-    z-index: 1000;
+.logo h1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 36px;
+    color: #ffffff;
+    font-family: 'Audiowide', sans-serif;
 }
-img{
-    width: 250px;
-    height: 250px;
 
+.logo img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 120px;
 }
-h1{
-    font-size: 80px;
-   width: 500px;
-    color: rgb(224, 214, 70);
-    margin-left: 50px;
-    text-align: end;
-}
-.botoes{
 
+/* Estrutura geral */
+.estrutura {
+    position: relative;
+    padding: 40px;
+    margin-top: 60px;
+}
+
+/* Títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Audiowide', sans-serif;
+    position: relative;
+    margin: 20px 0;
+    color: #33f503;
+    text-transform: uppercase;
+}
+
+/* Botões / Navegação */
+.botoes {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-
+    flex-direction: column;/* <-- ESSENCIAL: muda o eixo para vertical */
+    gap: 10px;/* Espaço entre os botões */
+    margin-bottom: 20px;
 }
-h2{
 
-    margin-left: 50px;
-    margin-top: 20px;
-    color: rgb(224, 214, 70);
+.botoes nav {
+    display: inline-block;
 }
-nav{
-    margin-left: 50px;
-    color: yellow;
-    font-family:Arial, Helvetica, sans-serif;
-}
-.menu a {
-    color: yellow;
+
+.botoes nav a {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-family: 'Audiowide', sans-serif;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #f0bf1e;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
+    border: 2px solid #00ffff;
+    border-radius: 10px;
     font-weight: bold;
+    text-shadow: 0 0 5px #00ffff;
+    box-shadow: 0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff;
+    transition: all 0.3s ease;
 }
 
-.menu a:hover {
-    color: white;
+.botoes nav a:hover {
+    background-color: #edf1f1;
+    color: #000000;
+    box-shadow: 0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff,
+        
 }
 
-/* Seções */
-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 28px;
-    font-weight: bold;
-    color: white;
+/* Para mover elementos livremente */
+.movel {
+    position: absolute;
+    cursor: move;
+    border: 1px dashed #ffffff;
+    padding: 5px;
 }
-
-#sec1 { background: #1e1e1e; }
-#sec2 { background: #333; }
-#sec3 { background: #555; }

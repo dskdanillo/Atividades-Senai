@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Bidimensional - Matriz</title>
+    <link rel="stylesheet" href="../pgWeb/css/estruturaSE.css">
+    <script src="js/animacao.js"></script>
+</head>
+
+<body>
+
+    <h1>Exemplo - Estrutura de Multidimensional - Matriz</h1>
+    <br>
+
+    <div>
+         <h4 class="proposta">Exemplo - Alimentar uma mariz 3x3 de valores inteiros.</h4>
+    </div>
+    <div>
+
+        <div class="navegacaoPG">
+
+            <h3><a href="index.html">INICIO</a></h3>
+            <h3><a href="matrizEstrutura.html">PROPOSTAS</a></h3>
+    
+        </div>
+        <form><!--ATENÇÃO-->
+            <div class="textareaSE">
+                <textarea name="fonte" cols="70" rows="20" ;>
+
+                    
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Matriz</title>
+   
+</head>
+<body>
+
+        <section>
+
+                <h2>Exemplo de Matriz 3 x 3</h2>
+                <font face = "arial">
+
+                    <form name="frmnumint" action="#" method="get" onsubmit="return validaProc()">
+                        <fieldset class="cadinteiro">
+
+                         <legend>Estrutura de Dados</legend>
+                         <br>
+
+                         <button type="submit">Enviar</button>
+
+
+                        </fieldset>
+
+                    </form>
+
+                </font>
+
+        </section>
+    
+</body>
+</html>
+<style>
+
+
+body{
+    background-color: darkgray;
+
+}
+section {
+    
+    margin-top: 0px auto;
+    
+}
+
+.cadinteiro {
+    width: 300px;
+    margin: 0px auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.cadinteiro input{
+    margin: 5px auto;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.cadinteiro button {
+    width: 30%;
+    margin: 0 10%;
+    background-color: rgb(78, 0, 167);
+    font-weight: bold;
+    font-size: 16px; 
+    color: white;
+    border: none;
+    border-radius: 20px; /* <<< Aqui define o arredondamento */
+    padding: 10px;       /* opcional: dá mais "altura" ao botão */
+    cursor: pointer;     /* opcional: muda o cursor para mãozinha */
+}
+
+label {
+
+    float: left
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 50px;
+    color: rgb(110, 7, 245);
+}
+</style>
+
+<script>
+    function validaProc() {
+        let matriz = [];
+        let linhas = 3;
+        let colunas = 3;
+
+        // Alimentar a Matriz
+        for (let i = 0; i < linhas; i++) {
+            matriz[i] = []; // Inicializa a linha como um array
+
+            for (let c = 0; c < colunas; c++) {
+                let valor = prompt("Digite o valor da linha " + i + " e coluna " + c);
+
+
+                matriz[i][c] = parseInt(valor); // Converte para número inteiro
+
+
+                if (isNaN(matriz[i][c])) {
+                    alert("Valor inválido! Por favor, insira apenas números.");
+                    return false;
+                }
+            }
+        }
+
+
+        for (let i = 0; i < linhas; i++) {
+            for (let c = 0; c < colunas; c++) {
+                document.write(matriz[i][c] + "&nbsp;&nbsp;");
+            }
+            document.write("<br>");
+        }
+
+        return false; // Impede o envio do formulário
+    }
+
+</script>
+</textarea>
+            </div>
+            <div>
+                <input type="button" value="Executar" onclick="document.write(fonte.value);" />
+            </div>
+        </form>
+</body>
+
+</html>

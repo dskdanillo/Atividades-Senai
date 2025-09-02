@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Unidimensional - Vetor</title>
+    <link rel="stylesheet" href="../pgWeb/css/estruturaSE.css">
+    <script src="js/animacao.js"></script>
+</head>
+
+<body>
+    <h1>Atividade - 4 Estrutura de Unidimensional - Vetor
+
+        <div>
+            <h4 class="proposta">Proposta 4
+                <br> Alimentar um vetor com 10 números reais e depois exibir os
+                números localizados nas posições impares
+            </h4>
+        </div>
+        <div class="navegacaoPG">
+
+            <h3><a href="index.html">INICIO</a></h3>
+            <h3><a href="vetorEstrutura.html">PROPOSTAS</a></h3>
+    
+        </div>
+
+            <form><!--ATENÇÃO-->
+                <div class="textareaSE">
+                    <textarea name="fonte" cols="70" rows="20" ;>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de vetores</title>
+    
+</head>
+<body>
+
+        <section>
+
+                <h2>Atividade - 4 </h2>
+                <font face = "arial">
+
+                    <form name="frmnumint" action="#" method="get" onsubmit="return validaProc()">
+                        <fieldset class="cadinteiro">
+
+                         <legend>Estrutura de Dados</legend>
+                         <br>
+
+                         <button type="submit">Enviar</button>
+
+
+                        </fieldset>
+
+                    </form>
+
+                </font>
+
+        </section>
+    
+</body>
+</html>
+                   
+                   <style>
+
+
+body{
+    background-color: darkgray;
+
+}
+section {
+    
+    margin-top: 0px auto;
+    
+}
+
+.cadinteiro {
+    width: 300px;
+    margin: 0px auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.cadinteiro input{
+    margin: 5px auto;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.cadinteiro button {
+    width: 30%;
+    margin: 0 10%;
+    background-color: rgb(78, 0, 167);
+    font-weight: bold;
+    font-size: 16px; 
+    color: white;
+    border: none;
+    border-radius: 20px; /* <<< Aqui define o arredondamento */
+    padding: 10px;       /* opcional: dá mais "altura" ao botão */
+    cursor: pointer;     /* opcional: muda o cursor para mãozinha */
+}
+
+label {
+
+    float: left
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 50px;
+    color: rgb(110, 7, 245);
+}
+
+</style>
+
+                    
+                    <script>
+                        function validaProc() {
+
+
+                            let i;
+
+                            let num = [];
+
+                            for (i = 0; i < 10; i++) {
+
+                                num[i] = parseFloat(prompt("Digite o " + (i + 1) + "° numero"));
+
+                            }
+
+
+                            for (i = 0; i < 10; i++) {
+
+
+
+                                if (i % 2 != 0) {
+                                    console.log("A posição " + i + " é : " + num[i]);
+                                }
+                            }
+                            return false
+                        }
+
+
+
+                    </script>
+
+            </textarea>
+                </div>
+                <div>
+                    <input type="button" value="Executar" onclick="document.write(fonte.value);" />
+                </div>
+            </form>
+</body>
+
+</html>

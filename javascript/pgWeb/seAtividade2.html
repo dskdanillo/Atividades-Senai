@@ -10,17 +10,24 @@
 </head>
 
 <body>
-    <h1>Atividade - 2</h1>
+    <h1>Atividade - 2 Estrutura SE</h1>
     <br>
-        <h4>ATIVIDADE- Ler Dois números e dizer se é maior ou igual</h4>
+    <h4 class="proposta">Proposta 2 <br>
+        Ler Dois números e dizer se é maior ou igual</h4>
     </div>
-    <div>
-       
+
+    <div class="navegacaoPG">
+
         <h3><a href="index.html">INICIO</a></h3>
+        <h3><a href="seEstrutura.html">PROPOSTAS</a></h3>
+
+    </div>
+    
         <form><!--ATENÇÃO-->
             <div class="textareaSE">
                 <textarea name="fonte" cols="70" rows="20" ;>
-                    <!DOCTYPE html>
+
+<!DOCTYPE html>
                     <html lang="pt-BR">
                     <head>
                         <meta charset="UTF-8">
@@ -101,33 +108,33 @@ h2 {
 }
                     </style>
                     <script>
-function compararnum(){
-   
-   if(document.frmnums.txtnum1.value==""){
+                        function compararnum() {
 
-       alert("Digite o primeiro número")
-       document.frmnums.txtnum1.focus();   
-   }else if(document.frmnums.txtnum2.value==""){
+                            if (document.frmnums.txtnum1.value == "") {
 
-       alert("Digite o segundo número")
-       document.frmnotas.txtnum2.focus();   
-   }else{
+                                alert("Digite o primeiro número")
+                                document.frmnums.txtnum1.focus();
+                            } else if (document.frmnums.txtnum2.value == "") {
 
-       let numero1 = parseFloat(document.getElementById('num1').value)
-       let numero2 = parseFloat(document.getElementById('num2').value)
+                                alert("Digite o segundo número")
+                                document.frmnotas.txtnum2.focus();
+                            } else {
 
-       if(numero1<numero2){
+                                let numero1 = parseFloat(document.getElementById('num1').value)
+                                let numero2 = parseFloat(document.getElementById('num2').value)
 
-           alert("Número 2 é maior");
-       }else if(numero1>numero2){
-           
-           alert("Número 1 é maior");
-       }else{
+                                if (numero1 < numero2) {
 
-           alert("Os números são iguais!");
-       }
-   }
-}
+                                    alert("Número 2 é maior");
+                                } else if (numero1 > numero2) {
+
+                                    alert("Número 1 é maior");
+                                } else {
+
+                                    alert("Os números são iguais!");
+                                }
+                            }
+                        }
 
                     </script>
             </textarea>

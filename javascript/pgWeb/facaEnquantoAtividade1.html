@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura DO ~ While</title>
+    <link rel="stylesheet" href="../pgWeb/css/estruturaSE.css">
+    <script src="js/animacao.js"></script>
+</head>
+
+<body>
+    <h1>Atividade - 1 Estrutura DO ~ While</h1>
+    <br>
+
+    <div>
+         <h4 class="proposta">Proposta 1
+            <br> Faça um algoritmo que leia quantos números o usuário deseja informar e imprimir seu
+            somatório. Para finalizara estrutura digite 0 (número) zero
+        </h4>
+    </div>
+    <div class="navegacaoPG">
+
+        <h3><a href="index.html">INICIO</a></h3>
+        <h3><a href="facaEnquantoEstrutura.html">PROPOSTAS</a></h3>
+
+    </div>
+
+
+        <form><!--ATENÇÃO-->
+            <div class="textareaSE">
+                <textarea name="fonte" cols="70" rows="20" ;>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade1 - Somatoria de 2 números </title>
+    
+   
+    <script src="js/validaProc.js"></script>
+</head>
+<body>
+
+    <section>
+        <h2>Atividade1 - Somatória de 2 números</h2>
+        <font face="arial">
+
+            <form name="frmnumint" action="#" method="get" onsubmit="return validaProc()">
+                <fieldset class="cadEnquanto">
+
+                    <legend>Entrada de dados</legend>
+                    <br>
+
+                    <button type="submit">Enviar</button>
+
+                </fieldset>
+            </form>
+        </font>
+    </section>
+</body>
+
+</html>
+                   
+                   <style>
+  
+/*Configurações gerais*/
+
+section{
+
+    margin: top 0px auto;
+
+}
+
+.cadEnquanto{
+    width: 300px;
+    margin: 0px auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cadEnquanto input{
+
+    margin: 5px auto;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.cadEnquanto button{
+    width: 30%;
+    margin: 0 10%;
+    background-color: #b1ccf5;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+label{
+
+    float: left;
+
+}
+
+h2{
+
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+/*Configurações da página*/
+
+                    </style>
+
+                    
+                    <script>
+                        function validaProc() {
+
+                            let somatoria = 0;
+                            let resposta;
+
+                            do {
+
+                                let numero = parseInt(prompt("Digite o número : "));
+                                console.log("O número informado é : " + numero);
+                                somatoria += numero;
+                                resposta = parseInt(prompt("Para sair digite o número 0 ou outro para continuar :"));
+
+                            } while (resposta != 0)
+                            console.log("A somatória dos números é : " + somatoria);
+                            return false;
+                        }
+                    </script>
+
+            </textarea>
+            </div>
+            <div>
+                <input type="button" value="Executar" onclick="document.write(fonte.value);" />
+            </div>
+        </form>
+</body>
+
+</html>

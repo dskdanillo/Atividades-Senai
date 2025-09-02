@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura DO ~ While</title>
+    <link rel="stylesheet" href="../pgWeb/css/estruturaSE.css">
+    <script src="js/animacao.js"></script>
+</head>
+
+<body>
+    <h1>Atividade - 3</h1>
+    <br>
+
+    <div>
+         <h4 class="proposta">Proposta 3
+            <br> Cadastrar alunos em 3 salas e apresentar - Total de alunos na escola:
+            Número de salas com média maior que 7:
+            Média geral da escola:
+    </div>
+    <div class="navegacaoPG">
+
+        <h3><a href="index.html">INICIO</a></h3>
+        <h3><a href="facaEnquantoEstrutura.html">PROPOSTAS</a></h3>
+
+    </div>
+
+        <form><!--ATENÇÃO-->
+            <div class="textareaSE">
+                <textarea name="fonte" cols="70" rows="20" ;>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro de Notas - 3 Salas</title>
+  
+ 
+</head>
+<body>
+  <section>
+   
+    <h2>Cadastro de Notas de 3 Salas</h2>
+        <form name="frmnumint" action="#" method="get" onsubmit="return validProc();">
+        <fieldset class="cadinteiro">
+                <legend>Entrada de Dados</legend>
+                <label for="txnumint">PRONTO PARA INICIAR?:</label><br />
+                <input type="text" id="txnumint" name="txnumint" autofocus /><br /><br />
+                <div class="botoes">
+          <button type="submit">Enviar</button><button type="reset">Limpar</button>
+         </div>
+      </fieldset>
+         </form>
+  </section>
+</body>
+</html>
+    
+
+<style>
+    
+
+
+
+body{
+    background-color: darkgray;
+
+}
+section {
+    
+    margin-top: 0px auto;
+    
+}
+
+.cadinteiro {
+    width: 300px;
+    margin: 0px auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.cadinteiro input{
+    margin: 5px auto;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.cadinteiro button {
+    width: 30%;
+    margin: 0 10%;
+    background-color: rgb(78, 0, 167);
+    font-weight: bold;
+    font-size: 16px; 
+    color: white;
+    border: none;
+    border-radius: 20px; /* <<< Aqui define o arredondamento */
+    padding: 10px;       /* opcional: dá mais "altura" ao botão */
+    cursor: pointer;     /* opcional: muda o cursor para mãozinha */
+}
+
+label {
+
+    float: left
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 50px;
+    color: rgb(110, 7, 245);
+}
+
+</style>
+
+<script>
+    function validProc() {
+        if (document.frmnumint.txnumint.value == "") {
+            alert("Preencha o campo Número");
+            document.frmnumint.txnumint.focus();
+            return false;
+        } else {
+            let nu = parseInt(document.getElementById('txnumint').value);
+            let cont = 1;
+            console.log("Calculo de médias por sala", nu);
+        }
+
+        const numSalas = 3;
+        let totalAlunos = 0;
+        let somaNotasEscola = 0;
+        let salasComMediaAlta = 0;
+
+        console.clear();
+        console.log("Iniciando cadastro das notas...");
+
+        for (let i = 0; i < numSalas; i++) {
+            let somaNotasSala = 0;
+            let qtdAlunosSala = 0;
+            let continuar;
+
+            console.log("\n>>> Iniciando cadastro da Sala " + (i + 1));
+
+            do {
+                let entradaNota = prompt("Sala " + (i + 1) + " - Digite a nota do aluno (0 a 10), ou deixe em branco para parar:");
+
+                // Se vazio (""), para cadastro da sala
+                if (entradaNota == "") {
+                    continuar = false;
+                    console.log("Finalizando cadastro da Sala " + (i + 1));
+                    break;
+                }
+
+
+                let nota = parseFloat(entradaNota);     // Converter para número com decimal com virgula
+
+                // Verifica se entrada é igual ao número e se ta de 0 a 10
+
+                if (nota == entradaNota && nota >= 0 && nota <= 10) {
+                    somaNotasSala += nota;
+                    qtdAlunosSala++;
+                    totalAlunos++;
+                    somaNotasEscola += nota;
+                    console.log("Nota cadastrada: " + nota.toFixed(2));//toFixed(2) para limitar a quantidade de casas ápos virgula
+                } else {
+                    alert("Nota inválida! Digite um número entre 0 e 10.");
+                }
+
+                if (continuar !== false) {
+                    continuar = confirm("Deseja adicionar mais um aluno na Sala " + (i + 1) + "?");
+                }
+            } while (continuar);
+
+            let mediaSala = 0;
+            if (qtdAlunosSala > 0) {
+                mediaSala = somaNotasSala / qtdAlunosSala;
+            }
+
+            if (mediaSala > 7) {
+                salasComMediaAlta++;
+            }
+
+            console.log("Sala " + (i + 1) + " - Total de alunos: " + qtdAlunosSala + ", Média: " + mediaSala.toFixed(2));
+        }
+
+        let mediaEscola = 0;
+        if (totalAlunos > 0) { mediaEscola = somaNotasEscola / totalAlunos; }
+
+        console.log("\n=== RESULTADOS ===");
+        console.log("Total de alunos na escola: " + totalAlunos);
+        console.log("Número de salas com média > 7: " + salasComMediaAlta);
+        console.log("Média geral da escola: " + mediaEscola.toFixed(2));
+
+        return false;
+    }
+
+</script>
+
+</textarea>
+            </div>
+            <div>
+                <input type="button" value="Executar" onclick="document.write(fonte.value);" />
+            </div>
+        </form>
+</body>
+
+</html>
