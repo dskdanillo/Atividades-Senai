@@ -1,13 +1,13 @@
 /* Fonte futurista gamer */
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
-/* Fundo com imagem estática + gif animado no canto */
+/* Fundo com imagem estática */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Audiowide', sans-serif;
     font-size: 18px;
-    background: url('../img/gif.gif') no-repeat center center fixed, url('../img/animacao.gif') no-repeat top right;
+    background: url('../img/gif.gif') no-repeat center center fixed;
     background-size: cover, 150px;
     color: #ffffff;
 }
@@ -77,7 +77,7 @@ h6 {
 /* Botões / Navegação */
 .botoes {
     display: flex;
-    flex-direction: column;/* <-- ESSENCIAL: muda o eixo para vertical */
+    flex-direction: column;
     gap: 10px;/* Espaço entre os botões */
     margin-bottom: 20px;
 }
@@ -115,7 +115,7 @@ h6 {
         
 }
 
-/* Para mover elementos livremente */
+/* Para mover tAgs */
 .movel {
     position: absolute;
     cursor: move;
