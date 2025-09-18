@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/formulário.css">
+    <script src="../js/txtarea.js"></script>
+    <script src="../js/validaFrm.js"></script>
+    <link rel="shortcut icon" href="../img/regexIcon.png">
+    <title>Info Regex (.*)</title>
+</head>
+
+<body>
+    <div></div>
+    <div class="container">
+        <div class="titulo">
+            <h1>Formulário</h1>
+        </div>
+        <form class="form1" action="#" method="get" name="form1" onsubmit="return validafrm()">
+<!--NOME-->
+            <div class="input">
+                <label>Nome</label>
+                <input type="text" name="txtnome" id="nome" placeholder="Nome Completo">
+            </div>
+            <button type="button" onclick="mostrarNome()">Como fazer:</button>
+
+            <div id="conteudo" style="display: none;">
+                <h3>HTML:</h3>
+                <img src="../img/nomeHTML.png" alt="Código html Nome">
+
+                <h3>JavaScript:</h3>
+                <img src="../img/nomeJS.png" alt="Código JavaScript Nome">
+            </div>
+
+            <script>
+                function mostrarNome() {
+                    const bloco = document.getElementById("conteudo");
+                    bloco.style.display = (bloco.style.display === "none") ? "flex" : "none";
+                }
+            </script>
+
+<!--Email-->
+            <div class="input">
+                <label>E-mail</label>
+                <input type="email" name="txtmail" id="email" placeholder="exemplo@email.com">
+            </div>
+            <button type="button" onclick="mostrarEmail()">Como fazer:</button>
+
+            <div id="conteudo2" style="display: none;">
+                <h3>HTML:</h3>
+                <img src="../img/emailHTML.png" alt="Código html Email">
+
+                <h3>JavaScript:</h3>
+                <img src="../img/emailJS.png" alt="Código JavaScript Email">
+            </div>
+
+            <script>
+                function mostrarEmail() {
+                    const bloco = document.getElementById("conteudo2");
+                    bloco.style.display = (bloco.style.display === "none") ? "flex" : "none";
+                }
+            </script>
+
+<!--CPF-->
+            <div class="input">
+                <label>Cpf</label>
+                <input type="text" name="txtcpf" id="cpf" placeholder="000.000.000-00">
+            </div>
+            <button type="button" onclick="mostrarCPF()">Como fazer:</button>
+
+            <div id="conteudo3" style="display: none;">
+                <h3>HTML:</h3>
+                <img src="../img/cpfHTML.png" alt="Código html CPF">
+
+                <h3>JavaScript:</h3>
+                <img src="../img/cpfJS.png" alt="Código JavaScript CPF">
+            </div>
+
+            <script>
+                function mostrarCPF() {
+                    const bloco = document.getElementById("conteudo3");
+                    bloco.style.display = (bloco.style.display === "none") ? "flex" : "none";
+                }
+            </script>
+
+<!--CNPJ-->
+            <div class="input">
+                <label>Cnpj</label>
+                <input type="text" name="txtcnpj" id="cnpj" placeholder="00.000.000/0000-00">
+            </div>
+            <button type="button" onclick="mostrarCNPJ()">Como fazer:</button>
+
+            <div id="conteudo4" style="display: none;">
+                <h3>HTML:</h3>
+                <img src="../img/cnpjHTML.png" alt="Código html CNPJ">
+
+                <h3>JavaScript:</h3>
+                <img src="../img/cnpjJS.png" alt="Código JavaScript CNPJ">
+            </div>
+
+            <script>
+                function mostrarCNPJ() {
+                    const bloco = document.getElementById("conteudo4");
+                    bloco.style.display = (bloco.style.display === "none") ? "flex" : "none";
+                }
+            </script>
+
+<!--Telefone-->
+            <div class="input">
+                <label>Telefone</label>
+                <input type="text" name="txtfone" id="fone" placeholder="(00)00000-0000">
+            </div>
+
+            <button type="button" onclick="mostrarFone()">Como fazer:</button>
+
+            <div id="conteudo5" style="display: none;">
+                <h3>HTML:</h3>
+                <img src="../img/foneHTML.png" alt="Código html Fone">
+
+                <h3>JavaScript:</h3>
+                <img src="../img/foneJS.png" alt="Código JavaScript Fone">
+            </div>
+
+            <script>
+                function mostrarFone() {
+                    const bloco = document.getElementById("conteudo5");
+                    bloco.style.display = (bloco.style.display === "none") ? "flex" : "none";
+                }
+            </script>
+
+<!--Comentário-->
+            <div class="input">
+                <label>Comentário</label>
+                <textarea name="txtarea" id="area" placeholder="escreva um comentário"></textarea>
+            </div>
+            <button type="button" onclick="return substituirTexto()">Censurar</button>
+
+            <div class="botoes">
+                <button type="reset">Limpar</button>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>copyright © ADS2025</p>
+    </footer>
+</body>
+
+</html>
